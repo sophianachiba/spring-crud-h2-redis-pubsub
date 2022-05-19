@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+
+  redis:
+    image: redis
+
+  springboot:
+    image: spring-boot-jpa:latest
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - /data/jhooq-springboot-container
+    ports:
+      - 8080:8080
+    links:
+      - redis
+  angular:
+    image: angular-app:latest
+    ports:
+      - 8081:80
