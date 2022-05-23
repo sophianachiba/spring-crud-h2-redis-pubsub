@@ -29,8 +29,8 @@ see https://hub.docker.com/repository/docker/sophianachiba/angular_crud_demo
 # Building docker and push
 ```
 mvn clean package
-`docker build .`
-`docker tag #ID sophianachiba/angular-crud-demo`
-`docker push sophianachiba/angular-crud-demo`
+docker build .
+docker tag #ID sophianachiba/angular-crud-demo
+docker push sophianachiba/angular-crud-demo
 ```
 
