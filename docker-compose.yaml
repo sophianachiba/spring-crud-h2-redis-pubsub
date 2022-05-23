@@ -6,7 +6,7 @@ services:
     image: redis
 
   springboot:
-    image: spring-boot-jpa:latest
+    image: sophianachiba/spring_crud_h2_redis_pubsub:latest
     build:
       context: ./
       dockerfile: Dockerfile
@@ -17,6 +17,6 @@ services:
     links:
       - redis
   angular:
-    image: angular-app:latest
+    image: sophianachiba/angular_crud_demo:latest
     ports:
       - 8081:80
